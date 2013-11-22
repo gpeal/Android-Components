@@ -9,11 +9,47 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView" />
 
-    <fragment
+    <com.gpeal.kitchensink.SpiralMenuView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.gpeal.kitchensink.SpiralMenuFragment"
         android:id="@+id/spiral_menu"
-        android:layout_gravity="center" />
+        android:layout_gravity="center" >
+        <ImageButton
+            android:id="@+id/spiral_menu_button"
+            android:layout_width="@dimen/spiral_menu_icon_size"
+            android:layout_height="@dimen/spiral_menu_icon_size"
+            android:background="@drawable/spiral_menu_item_bg"
+            android:src="@drawable/spiral_menu_item_camera"/>
+        <ImageButton
+            android:id="@+id/spiral_menu_button"
+            android:layout_width="@dimen/spiral_menu_icon_size"
+            android:layout_height="@dimen/spiral_menu_icon_size"
+            android:background="@drawable/spiral_menu_item_bg"
+            android:src="@drawable/spiral_menu_item_place"/>
+        <ImageButton
+            android:id="@+id/spiral_menu_button"
+            android:layout_width="@dimen/spiral_menu_icon_size"
+            android:layout_height="@dimen/spiral_menu_icon_size"
+            android:background="@drawable/spiral_menu_item_bg"
+            android:src="@drawable/spiral_menu_item_music"/>
+        <ImageButton
+            android:id="@+id/spiral_menu_button"
+            android:layout_width="@dimen/spiral_menu_icon_size"
+            android:layout_height="@dimen/spiral_menu_icon_size"
+            android:background="@drawable/spiral_menu_item_bg"
+            android:src="@drawable/spiral_menu_item_thought"/>
+        <ImageButton
+            android:id="@+id/spiral_menu_button"
+            android:layout_width="@dimen/spiral_menu_icon_size"
+            android:layout_height="@dimen/spiral_menu_icon_size"
+            android:background="@drawable/spiral_menu_item_bg"
+            android:src="@drawable/spiral_menu_item_sleep" />
+        <ImageButton
+            android:id="@+id/spiral_menu_button"
+            android:layout_width="@dimen/spiral_menu_icon_size"
+            android:layout_height="@dimen/spiral_menu_icon_size"
+            android:background="@drawable/spiral_menu_button_bg"
+            android:src="@drawable/spiral_menu_button_src"/>
+    </com.gpeal.kitchensink.SpiralMenuView>
 
 </FrameLayout>
