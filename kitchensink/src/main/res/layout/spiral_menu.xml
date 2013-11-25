@@ -2,52 +2,60 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foregroundGravity="center_vertical|center_horizontal">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView" />
+    android:foregroundGravity="center_vertical|center_horizontal"
+    android:background="@drawable/bg_wallpaper">
 
     <com.gpeal.kitchensink.SpiralMenuView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/spiral_menu"
-        android:layout_gravity="center" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp">
         <ImageButton
-            android:id="@+id/spiral_menu_button"
+            android:id="@+id/spiral_menu_item"
             android:layout_width="@dimen/spiral_menu_icon_size"
             android:layout_height="@dimen/spiral_menu_icon_size"
+            android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
-            android:src="@drawable/spiral_menu_item_camera"/>
+            android:src="@drawable/spiral_menu_item_camera"
+            android:visibility="gone" />
         <ImageButton
-            android:id="@+id/spiral_menu_button"
+            android:id="@+id/spiral_menu_item"
             android:layout_width="@dimen/spiral_menu_icon_size"
             android:layout_height="@dimen/spiral_menu_icon_size"
+            android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
-            android:src="@drawable/spiral_menu_item_place"/>
+            android:src="@drawable/spiral_menu_item_place"
+            android:visibility="gone" />
         <ImageButton
-            android:id="@+id/spiral_menu_button"
+            android:id="@+id/spiral_menu_item"
             android:layout_width="@dimen/spiral_menu_icon_size"
             android:layout_height="@dimen/spiral_menu_icon_size"
+            android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
-            android:src="@drawable/spiral_menu_item_music"/>
+            android:src="@drawable/spiral_menu_item_music"
+            android:visibility="gone" />
         <ImageButton
-            android:id="@+id/spiral_menu_button"
+            android:id="@+id/spiral_menu_item"
             android:layout_width="@dimen/spiral_menu_icon_size"
             android:layout_height="@dimen/spiral_menu_icon_size"
+            android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
-            android:src="@drawable/spiral_menu_item_thought"/>
+            android:src="@drawable/spiral_menu_item_thought"
+            android:visibility="gone" />
         <ImageButton
-            android:id="@+id/spiral_menu_button"
+            android:id="@+id/spiral_menu_item"
             android:layout_width="@dimen/spiral_menu_icon_size"
             android:layout_height="@dimen/spiral_menu_icon_size"
+            android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
-            android:src="@drawable/spiral_menu_item_sleep" />
+            android:src="@drawable/spiral_menu_item_sleep"
+            android:visibility="gone" />
         <ImageButton
             android:id="@+id/spiral_menu_button"
-            android:layout_width="@dimen/spiral_menu_icon_size"
-            android:layout_height="@dimen/spiral_menu_icon_size"
+            android:layout_width="@dimen/spiral_menu_button_size"
+            android:layout_height="@dimen/spiral_menu_button_size"
+            android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_button_bg"
             android:src="@drawable/spiral_menu_button_src"/>
     </com.gpeal.kitchensink.SpiralMenuView>
