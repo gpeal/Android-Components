@@ -2,7 +2,6 @@ package com.gpeal.kitchensink;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
-import android.util.Log;
 import android.widget.ImageView;
 
 public class MenuIconAnimator extends ValueAnimator {
@@ -29,15 +28,14 @@ public class MenuIconAnimator extends ValueAnimator {
 
             @Override
             public void onAnimationStart(Animator animator) {
-                Log.d(TAG, "onAnimationStart");
                 if (mAppear) {
                     mTarget.setVisibility(ImageView.VISIBLE);
                 }
+
             }
 
             @Override
             public void onAnimationEnd(Animator animator) {
-                Log.d(TAG, "onAnimationEnd");
                 if (!mAppear) {
                     mTarget.setVisibility(ImageView.GONE);
                 }
@@ -85,6 +83,6 @@ public class MenuIconAnimator extends ValueAnimator {
         double yOffset = val * mRadius * Math.sin(Math.toRadians(mDirection));
         mTarget.setTranslationX((float) xOffset);
         mTarget.setTranslationY((float) yOffset);
-        mTarget.setRotation(getAnimatedFraction() * 720f);
+        mTarget.setRotation(getAnimatedFraction() * -1080);
     }
 }

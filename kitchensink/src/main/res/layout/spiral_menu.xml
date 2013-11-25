@@ -9,6 +9,7 @@
         android:id="@+id/spiral_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/spiral_menu_gradient_transition"
         android:paddingBottom="12dp"
         android:paddingLeft="12dp">
         <ImageButton
@@ -18,6 +19,7 @@
             android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
             android:src="@drawable/spiral_menu_item_camera"
+            android:paddingBottom="@dimen/spiral_menu_icon_bottom_padding"
             android:visibility="gone" />
         <ImageButton
             android:id="@+id/spiral_menu_item"
@@ -26,6 +28,7 @@
             android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
             android:src="@drawable/spiral_menu_item_place"
+            android:paddingBottom="@dimen/spiral_menu_icon_bottom_padding"
             android:visibility="gone" />
         <ImageButton
             android:id="@+id/spiral_menu_item"
@@ -34,6 +37,7 @@
             android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
             android:src="@drawable/spiral_menu_item_music"
+            android:paddingBottom="@dimen/spiral_menu_icon_bottom_padding"
             android:visibility="gone" />
         <ImageButton
             android:id="@+id/spiral_menu_item"
@@ -42,6 +46,7 @@
             android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
             android:src="@drawable/spiral_menu_item_thought"
+            android:paddingBottom="@dimen/spiral_menu_icon_bottom_padding"
             android:visibility="gone" />
         <ImageButton
             android:id="@+id/spiral_menu_item"
@@ -50,12 +55,14 @@
             android:layout_gravity="bottom|left"
             android:background="@drawable/spiral_menu_item_bg"
             android:src="@drawable/spiral_menu_item_sleep"
+            android:paddingBottom="@dimen/spiral_menu_icon_bottom_padding"
             android:visibility="gone" />
         <ImageButton
             android:id="@+id/spiral_menu_button"
             android:layout_width="@dimen/spiral_menu_button_size"
             android:layout_height="@dimen/spiral_menu_button_size"
             android:layout_gravity="bottom|left"
+            android:scaleType="center"
             android:background="@drawable/spiral_menu_button_bg"
             android:src="@drawable/spiral_menu_button_src"/>
     </com.gpeal.kitchensink.SpiralMenuView>

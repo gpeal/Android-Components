@@ -1,7 +1,10 @@
 package com.gpeal.kitchensink;
 
 import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.graphics.drawable.TransitionDrawable;
+import android.media.MediaPlayer;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -25,6 +28,12 @@ public class SpiralMenuView extends FrameLayout {
     private ImageButton mMenuButton;
     private List<ImageButton> mMenuItems;
     private List<MenuIconAnimator> mMenuItemAnimators;
+    private Animator mOpeningMenuButtonAnimator;
+    private Animator mClosingMenuButtonAnimator;
+    private TransitionDrawable mGradientTransition;
+
+    private final MediaPlayer mOpeningMediaPlayer;
+    private final MediaPlayer mClosingMediaPlayer;
 
     public SpiralMenuView(Context context) {
         this(context, null);
@@ -36,6 +45,9 @@ public class SpiralMenuView extends FrameLayout {
 
     public SpiralMenuView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+
+        mOpeningMediaPlayer = MediaPlayer.create(getContext(), R.raw.nav_out);
+        mClosingMediaPlayer = MediaPlayer.create(getContext(), R.raw.nav_in);
     }
 
     @Override
@@ -98,6 +110,13 @@ public class SpiralMenuView extends FrameLayout {
                 onMenuButtonClick();
             }
         });
+        mOpeningMenuButtonAnimator = ObjectAnimator.ofFloat(mMenuButton, "rotation", 0f, -135f);
+        mOpeningMenuButtonAnimator.setDuration(DURATION);
+        mClosingMenuButtonAnimator = ObjectAnimator.ofFloat(mMenuButton, "rotation", -135f, 0f);
+        mClosingMenuButtonAnimator.setDuration(DURATION);
+
+        View spiralMenu = findViewById(R.id.spiral_menu);
+        mGradientTransition = (TransitionDrawable) spiralMenu.getBackground();
     }
 
 
@@ -108,13 +127,21 @@ public class SpiralMenuView extends FrameLayout {
                 for(MenuIconAnimator a : mMenuItemAnimators) {
                     a.open();
                 }
+                mOpeningMenuButtonAnimator.start();
+                mGradientTransition.startTransition(DURATION / 2);
+                mOpeningMediaPlayer.start();
                 break;
             case STATE_OPENED:
-            case STATE_TRANSITIONING:
                 mState = STATE_TRANSITIONING;
                 for (MenuIconAnimator a : mMenuItemAnimators) {
                     a.close();
                 }
+                mClosingMenuButtonAnimator.start();
+                mGradientTransition.reverseTransition(DURATION / 2);
+                mClosingMediaPlayer.start();
+                break;
+            case STATE_TRANSITIONING:
+                mClosingMediaPlayer.start();
                 break;
         }
     }
