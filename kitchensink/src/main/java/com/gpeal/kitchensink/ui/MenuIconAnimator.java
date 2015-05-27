@@ -1,4 +1,4 @@
-package com.gpeal.kitchensink;
+package com.gpeal.kitchensink.ui;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;

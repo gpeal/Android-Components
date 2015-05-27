@@ -1,4 +1,4 @@
-package com.gpeal.kitchensink;
+package com.gpeal.kitchensink.ui;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -9,6 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+
+import com.gpeal.kitchensink.R;
 
 import java.util.ArrayList;
 import java.util.List;

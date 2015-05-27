@@ -5,7 +5,7 @@
     android:foregroundGravity="center_vertical|center_horizontal"
     android:background="@drawable/bg_wallpaper">
 
-    <com.gpeal.kitchensink.SpiralMenuView
+    <com.gpeal.kitchensink.ui.SpiralMenuView
         android:id="@+id/spiral_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -65,6 +65,6 @@
             android:scaleType="center"
             android:background="@drawable/spiral_menu_button_bg"
             android:src="@drawable/spiral_menu_button_src"/>
-    </com.gpeal.kitchensink.SpiralMenuView>
+    </com.gpeal.kitchensink.ui.SpiralMenuView>
 
 </FrameLayout>

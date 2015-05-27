@@ -1,4 +1,4 @@
-package com.gpeal.kitchensink;
+package com.gpeal.kitchensink.ui;
 
 import android.view.animation.Interpolator;
 
